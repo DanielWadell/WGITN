@@ -3,5 +3,10 @@ const Schema = mongoose.Schema;
 
 
 const PostSchema = new Schema({
-    
+    title : String,
+    body : String,
+    user_info: 
+    tags: {
+
+    }
 })
