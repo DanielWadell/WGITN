@@ -17,7 +17,7 @@ const UserSchema = new Schema({
     
 });
 
-userSchema.statics.findByCredentials = async (user_name, password) => {
+UserSchema.statics.findByCredentials = async (user_name, password) => {
     const user = await User.findOne({ user_name })
 
     if (!user) {

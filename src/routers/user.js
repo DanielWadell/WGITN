@@ -10,7 +10,7 @@ router.post('/createuser', async (req, res) => {
         await user.save()
         res.status(201).send({ user })
     } catch (e) {
-        res.status(400).sned(e)
+        res.status(400).send(e)
     }
 })
 
@@ -35,6 +35,9 @@ router.get('/logoutuser', async (req, res) => {
                 return res.redirect('/')
             }
         })
+    }
+    else {
+        res.status(201)
     }
 })
 
