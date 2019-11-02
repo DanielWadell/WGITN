@@ -1,6 +1,9 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/wgh');
+mongoose.connect('mongodb://localhost/wgh',{
+    useNewUrlParser:true,
+    useUnifiedTopology: true
+});
 
 mongoose.connection.once('open',function(){
     console.log('Connection has been made, now make fireworks');
