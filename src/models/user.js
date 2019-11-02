@@ -13,6 +13,7 @@ const UserSchema = new Schema({
         l_name: String,
         city: String
     }
+    
 });
 
 const User = mongoose.model('user', UserSchema);
