@@ -4,11 +4,15 @@ const Schema = mongoose.Schema;
 //Create Schema and Model
 
 const UserSchema = new Schema({
-    user_name: String,
-    f_name: String,
-    l_name: String,
-    password: String,
-    city: String
+    log_in: {
+        user_name: String,
+        password: String
+    },
+    information: {
+         f_name: String,
+        l_name: String,
+        city: String
+    }
 });
 
 const User = mongoose.model('user', UserSchema);
