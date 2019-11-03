@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
-const Post = require('posts')
+const Post = require('./posts')
 const Schema = mongoose.Schema;
 
 //Create Schema and Model
