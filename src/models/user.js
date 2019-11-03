@@ -17,10 +17,8 @@ const UserSchema = new Schema({
         minlength: 7
     },
     posts: [{
-        post: {
-            type: Post,
-            required: true
-        }
+        type: Post,
+        required: true
     }]
     
 });
