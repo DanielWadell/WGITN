@@ -12,7 +12,8 @@ const PostSchema = new Schema({
         required: true
     },
     comments: [{
-        type: Comment,
+        type: String,
+        ref: 'Comments',
         required: true
     }],
     upvote: {

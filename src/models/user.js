@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
-const Post = require('./posts')
 const Schema = mongoose.Schema;
 
 //Create Schema and Model
@@ -17,7 +16,8 @@ const UserSchema = new Schema({
         minlength: 7
     },
     posts: [{
-        type: Post,
+        type: String,
+        ref: 'Posts',
         required: true
     }]
     
