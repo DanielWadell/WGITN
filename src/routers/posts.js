@@ -4,7 +4,9 @@ const router = new express.Router()
 
 //Creates a new post
 router.post('/createpost', async (req, res) => {
-    const post = new Post(req.body)
+    const post = new Post({
+        ...req.body,
+        owner: req.user._id})
 
     try {
         await post.save()

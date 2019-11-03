@@ -13,8 +13,7 @@ const PostSchema = new Schema({
     },
     comments: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Comments',
-        required: true
+        ref: 'Comments'
     }],
     upvote: {
         type: Number,
@@ -31,6 +30,11 @@ const PostSchema = new Schema({
     tag: {
         type: String,
         required: true
+    },
+    owner: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'User'
     }
 })
 
