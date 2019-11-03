@@ -17,8 +17,7 @@ const UserSchema = new Schema({
     },
     posts: [{
         type: String,
-        ref: 'Posts',
-        required: true
+        ref: 'Posts'
     }]
     
 });
