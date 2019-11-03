@@ -22,6 +22,10 @@ const PostSchema = new Schema({
     downvote: {
         type: Number,
         required: true
+    },
+    img: {
+        data: Buffer,
+        contentType: String
     }
 })
 
