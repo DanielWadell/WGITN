@@ -1,19 +1,27 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
+const Post = require('posts')
 const Schema = mongoose.Schema;
 
 //Create Schema and Model
 
 const UserSchema = new Schema({
-    log_in: {
-        user_name: String,
-        password: String
+    user_name: {
+        type: String,
+        required: true,
+        trim: true
     },
-    information: {
-         f_name: String,
-        l_name: String,
-        city: String
-    }
+    password: {
+        type: String,
+        required: true,
+        minlength: 7
+    },
+    posts: [{
+        post: {
+            type: Post,
+            required: true
+        }
+    }]
     
 });
 
