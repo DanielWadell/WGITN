@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://whatsgood-xmsib.mongodb.net/',{
+mongoose.connect(process.env.MONGODB_URL,{
     useNewUrlParser:true,
     useUnifiedTopology: true
 });

@@ -12,7 +12,7 @@ const PostSchema = new Schema({
         required: true
     },
     comments: [{
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Comments',
         required: true
     }],

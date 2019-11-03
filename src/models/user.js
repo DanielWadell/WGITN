@@ -16,7 +16,7 @@ const UserSchema = new Schema({
         minlength: 7
     },
     posts: [{
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Posts'
     }]
     
