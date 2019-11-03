@@ -5,7 +5,7 @@ const router = new express.Router()
 //Creates a new post
 router.post('/createpost', async (req, res) => {
     const post = new Post(req.body)
-
+    console.log(post)
     try {
         await post.save()
         res.status(201).send({ post })
@@ -46,3 +46,4 @@ router.get('/posts/maintenance', async (req, res) => {
     }
 
 })
+module.exports = router

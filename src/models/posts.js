@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const Comment = require('./comments')
 const Schema = mongoose.Schema;
 
 const PostSchema = new Schema({
@@ -11,18 +10,13 @@ const PostSchema = new Schema({
         type: String,
         required: true
     },
-    comments: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Comments',
-        required: true
-    }],
     upvote: {
         type: Number,
-        required: true
+        default:0
     },
     downvote: {
         type: Number,
-        required: true
+        default: 0
     },
     img: {
         data: Buffer,
@@ -31,8 +25,12 @@ const PostSchema = new Schema({
     tag: {
         type: String,
         required: true
-    }
-})
+    },
+    comments: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Comments',
+    }]
+});
 
 
 const Post = mongoose.model('post', PostSchema);
