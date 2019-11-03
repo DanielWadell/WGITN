@@ -26,6 +26,10 @@ const PostSchema = new Schema({
     img: {
         data: Buffer,
         contentType: String
+    },
+    tag: {
+        type: String,
+        required: true
     }
 })
 
